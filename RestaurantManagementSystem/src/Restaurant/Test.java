@@ -19,15 +19,29 @@ public class Test {
 			if("reserve".equals(reserve.toLowerCase())) {
 				System.out.println("Please enter the table number: ");
 				String id = s.next();
+				r.check(id);
 				r.reserve(id);
 				r.print(); 				
 				System.out.println();	
+				System.out.println("\"Continue\" or \"Exit\" ?");
+				String c =s.next();
+				if("exit".equals(c.toLowerCase())){
+				System.out.println("Thanks for your visit!");
+				break;
+				}
 			} else if("cancel".equals(reserve.toLowerCase())) {
 				System.out.println("Please enter the table number: ");
 				String id = s.next();
+				r.check(id);
 				r.cancel(id);
 				r.print(); 
 				System.out.println();
+				System.out.println("\"Continue\" or \"Exit\" ?");
+				String c =s.next();
+				if("exit".equals(c.toLowerCase())){
+				System.out.println("Thanks for your visit!");
+				break;
+				}
 			}else {				
 				System.out.println("Please enter the valid coice! ");
 			}
